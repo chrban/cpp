@@ -168,7 +168,6 @@ void score(Spiller* s)
 	int action{0};
 
 	cout << "______________________________________________________________________________\n\n" << endl;
-	// s -> displayHand();
 
 	if(s -> getValue()==21) // BLACKJACK
 	{
@@ -312,7 +311,6 @@ void bestHand()
 					int win = s-> getBet() * 2.5;
 					s->setCredit( win );
 					cout << "Utbetalt $"<<win<<"  til spiller " << s-> getPlayerNr() <<" ( BLACKJACK! =D )"<< endl; 
-					//du har blackjack og vinner 1.5 ganger bt
 				}
 					int win = s-> getBet() * 2;
 					s->setCredit( win );

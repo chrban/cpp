@@ -7,14 +7,14 @@
 
 Jeg startet med å skrive hele programmet rett fram, uten objekter i det hele tatt. 
 Det gjorde jeg først og fremst for å komme igang, samt bli kjent med c++ syntaksen.
-Det var interessant å gå gjennom forskjellige ideer for å representere en kortstokk! Det fikk meg til å tenke ut mange måter å gjøre det på. Jeg vat f.eks innom doble arrays og enums før jeg representerte 52 kort i en int-array, hvor jeg regnet ut verdier basert på modulus regning.
+Det var interessant å gå gjennom forskjellige ideer for å representere en kortstokk! Det fikk meg til å tenke ut mange måter å gjøre det på. Jeg var f.eks innom doble arrays og enums før jeg representerte 52 kort i en int-array, hvor jeg regnet ut verdier basert på modulus regning.
 Modulus 13 gav verdien på kortet, mens heltalldivisjon gav hvilket suit-intervall kortet tilhørte.
 
 #####Etter seks versjoner med forbedringer av denne løsningen, bestemte jeg meg for å forkaste alt og løse oppgaven objektorientert.
 
 **Gjeldende versjon**
 
-Tanken om gjenbruk av kode gjorde at jeg skilte ut programmet i Kort, og spiller-objekter. Dette kan enkelt implmenteres i framtidige spill. Blackjack filen min inneholder all spill-logikk. Her opprettes det vektorer av Spillere og en kortvektor.
+Tanken om gjenbruk av kode gjorde at jeg skilte ut programmet i kort, og spiller-objekter. Dette kan enkelt implmenteres i framtidige spill. Blackjack filen min inneholder all spill-logikk. Her opprettes det vektorer av Spillere og en kortvektor, som representerer en kortstokk.
 Kortobjektene er bygd opp slik at det enkelt kan genereres flere kortstokker i samme spill. Grunnet at jeg har litt knapt med tid før innleveringsfristen er imidlertid ikke dette 'aktivert' i spillet mitt. 
 
 Spillgangen er slik at du velger antall spillere som skal delta, hvor du så angir hvor mye du ønsker å satse. 

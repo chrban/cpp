@@ -15,15 +15,9 @@ int encrypted[]{1498105673, 1227249735, 1498829639,
 
 int main(){
 
-  // Print out the messages in human-readable form!   
 
 
 char* ptr = (char*)&encrypted;
-
-
-
-
-//cout << "- " << ptr << endl;
 
 
 
