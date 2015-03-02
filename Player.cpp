@@ -20,7 +20,7 @@ std::vector<Kort> Spiller::getHand()
 {
 	return hand;
 }
-void Spiller::displayHand()
+void Spiller::displayHand() 
 {	
 	std::chrono::milliseconds timespan(300);
 	
