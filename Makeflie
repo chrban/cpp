@@ -1,0 +1,18 @@
+GCC=fltk-config
+CCOPT=--compile
+
+OBJECTS=test.cpp
+
+EXEC=test
+
+all: $(OBJECTS)
+		$(GCC) $(CCOPT) $(OBJECTS) -o $(EXEC)
+
+%.o: %.cpp
+		$(GCC) $(CCOPT) -c $< -o $@
+
+
+
+clean:
+		$(RM) $(OBJECTS)
+		$(RM) $(EXE)
