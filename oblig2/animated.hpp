@@ -8,7 +8,7 @@ protected:
  public:
   
   /** Do all the changes in an animated object, as time progress */ 
-  virtual void operator++() = 0; 
+  virtual void operator++() = 0;
   
   /** Optional: Reset to initial state **/
   virtual void reset() {};

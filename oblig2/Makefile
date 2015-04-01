@@ -1,33 +1,18 @@
 LDOPTS:=$(shell fltk-config --ldflags)
 STD:=$(-std=c++11)
 
-SRC=main.cpp animation_canvas.cpp is_vector.cpp
+SRC=main.cpp animation_canvas.cpp is_vector.cpp has_color.cpp dot.cpp rocket.cpp fireworks.cpp animated.cpp
 BINARY=fireworks
 
-all: info fireworks
-
-
-info:
-	@echo "==================== BIULDING FOR FLTK ================================"
-	@echo "Found FLTK-version: \t" $(fireworks) 
-	@echo "Assumed options: \t" $(LDOPTS)
-	@echo ""
-	@echo 'Full options from "fltk-config --ldflags:"'
-	@echo $(shell fltk-config --ldflags)
-	@echo "======================================================================"
-	$(RM) $(BINARY)
-
-
+all: clean fireworks
 
 fireworks:
-	@echo "Building for "$(FLTK)
-
-	g++ $(STD) $(SRC) -o $(BINARY) $(LDOPTS)
-	
-	@echo m
-	@echo 'Done. Run with ./'$(BINARY)
+	g++ -std=c++11 $(SRC) -o $(BINARY) $(LDOPTS)
+	@echo 'Done. Run with ./'$(BINARY)   --------------
 	@echo 
 
 
 clean:
+	@echo --------------CLEANING-----------------------------
 	$(RM) $(BINARY)
+	@echo --------------DONE CLEANING------------------------

@@ -18,7 +18,6 @@ class animation_canvas : public Fl_Box {
   
   // Frames pr. second (animation speed)
   static int fps;
-  int x = 180;
   
  public:
   /** Initialize */

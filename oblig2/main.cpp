@@ -3,35 +3,23 @@
 #include <FL/Fl_Box.H>
 
 #include "animation_canvas.hpp"
-
+#include "dot.hpp"
+#include "fireworks.hpp"
 
 
 int main(int argc, char **argv) {
-  //opretter vindu
-  Fl_Window *window = new Fl_Window(340,180);
+  Fl_Window *window = new Fl_Window(1024,768);
 
-  //legger til bx
+  fireworks *f = new fireworks("eyyyyy",1024,768,20);
 
-  animation_canvas *box = new animation_canvas("pikk",40,40);
+Fl::add_timeout((double)1/25, animation_canvas::timer,window);
 
-   Fl::add_timeout(0.1, animation_canvas::timer, window);
-
-
-  // Fl::add_timeout(0.1, , window);
-
-//Fl::add_timeout(interval,myCallback, window);
-
-
-//box dettings
-  // box->box(FL_UP_BOX);
-  // box->labelfont(FL_BOLD+FL_ITALIC);
-  // box->labelsize(60);
-  // box->labeltype(FL_SHADOW_LABEL);
-
-//skal ikke legge til fler, derfior -> end
+  window->color(FL_BLACK);
+  window->fullscreen();
   window->end();
-
-  //vis vindu, enter fltk loop. 
   window->show(argc, argv);
-  return Fl::run();
+
+  Fl::run();
+
+  return 0;
 }
