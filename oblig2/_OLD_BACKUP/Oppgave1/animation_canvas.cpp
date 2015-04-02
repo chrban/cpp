@@ -2,7 +2,7 @@
 #include <iostream>
 #include <FL/fl_draw.H>
 
-int animation_canvas::fps = 25;
+int animation_canvas::fps = 30;
 
   animation_canvas::animation_canvas(const char *l, int w, int h) : Fl_Box::Fl_Box(1,1,w,h,l){}
 
@@ -20,9 +20,7 @@ int animation_canvas::fps = 25;
   }
 
    void animation_canvas::timer(void* canvas){
-
-    Fl::repeat_timeout(0.1,timer,canvas);
-    std::cout << "Timeout!" << std::endl;
+    Fl::repeat_timeout((double)1/fps,timer,canvas);
     ((Fl_Window*)canvas)->redraw();
   }
 

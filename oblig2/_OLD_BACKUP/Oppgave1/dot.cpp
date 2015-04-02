@@ -34,10 +34,17 @@ dot::dot(float _x,float _y,float _r, Color c) : is_vector(_x,_y), has_color(c)
 void dot::operator++()
 {
 	
-	// lighten_color();
-	// darken_color();
-	draw();
+	++t;
+	if(t < 20)
+	{
+		draw();
+		if(t%8==0)
+			darken_color();
+
+	}
 	increment_position();
+
+
 
 }
 
